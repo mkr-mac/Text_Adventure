@@ -3,9 +3,9 @@ public class TextAdventure {
 	static boolean kill = false;
 	private static void TextAdventure() {
 		
-		roomNumber = Room.enter(roomNumber);
+		Room.enter();
 		while(!kill){
-			roomNumber = GetInput.input(roomNumber);
+			GetInput.input();
 		}
 	}
 	public static void main(String args[]){

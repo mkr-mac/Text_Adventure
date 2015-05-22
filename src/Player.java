@@ -5,7 +5,7 @@ public class Player {
 	public static void nameSet(){
 		Scanner inputer = new Scanner(System.in);
 		String plname;
-		System.out.println("Feeling a bit dazed, You have a hard time recalling your name. What isk it?");
+		System.out.println("Feeling a bit dazed, You have a hard time recalling your name. What is it?");
 		plname = inputer.nextLine();
 		System.out.println("Yeah, your name is " + plname + ". How could you forget?");
 	}

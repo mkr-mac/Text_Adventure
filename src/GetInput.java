@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 public class GetInput {
-	public static int input(int roomNumber) {
+	public static void input() {
 		Scanner inputer = new Scanner(System.in);
 		String userinput;
 		userinput = inputer.nextLine();
@@ -24,11 +24,11 @@ public class GetInput {
 			
 		}else if((userinput.equals("move north"))||(userinput.equals("move forward"))||(userinput.equals("go north"))||(userinput.equals("go forward"))){
 			
-			roomNumber = Room.enter(roomNumber);
+			Room.enter();
 			
 		}else if(userinput.equals("look")){
 			
-			Room.description(roomNumber);
+			Room.description();
 			
 		}else if((userinput.equals("suicide"))||(userinput.equals("kill self"))){
 			TextAdventure.kill = true;
@@ -38,7 +38,6 @@ public class GetInput {
 			System.out.println("invalid");
 			
 		}
-		return roomNumber;
 		
 	}
 
