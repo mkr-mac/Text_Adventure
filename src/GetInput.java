@@ -1,41 +1,43 @@
-import java.util.Scanner;
-
-
 public class GetInput {
 	public static void input() {
-		Scanner inputer = new Scanner(System.in);
-		String userinput;
-		userinput = inputer.nextLine();
-		userinput = userinput.toLowerCase();
-		
-		if(userinput.equals("help")){
+		String userinput = Scans.readLine().toLowerCase();
+		switch(userinput){
+		case "help":
 			
 			System.out.println("Look - Observe the room around you.");
 			System.out.println("Move/Go - Move in a direction.");
-			System.out.println("Kill Self/Suicide - End it all");
+			System.out.println("Kill Self/Suicide - End it all");			
+			break;
 			
-		}else if(userinput.equals("move")){
+		case "move":
 			
-			System.out.println("You move, but not in any paticular direction.");
+			System.out.println("You move, but not in any paticular direction.");			
+			break;
 			
-		}else if(userinput.equals("go")){
+		case "go":
 			
-			System.out.println("Go where?");
+			System.out.println("Go where?");			
+			break;
 			
-		}else if((userinput.equals("move north"))||(userinput.equals("move forward"))||(userinput.equals("go north"))||(userinput.equals("go forward"))){
+		case "move north": case"move forward":case "go north":case "go forward":
 			
-			Room.enter();
+			Room.enter();			
+			break;
 			
-		}else if(userinput.equals("look")){
+		case "look":
 			
-			Room.description();
+			Room.description();			
+			break;
 			
-		}else if((userinput.equals("suicide"))||(userinput.equals("kill self"))){
-			TextAdventure.kill = true;
+		case "suicide": case "kill self":
 			
-		}else{
+			Player.kill = true;			
+			break;
 			
-			System.out.println("invalid");
+		default:
+			
+			System.out.println("");			
+			break;
 			
 		}
 		

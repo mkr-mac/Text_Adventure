@@ -1,4 +1,3 @@
-
 public class Room {
 	static int roomNumber = 0;
 	public static void enter() {

@@ -1,15 +1,11 @@
 public class TextAdventure {
-	static int roomNumber = 0;
-	static boolean kill = false;
-	private static void TextAdventure() {
-		
+
+	public static void main(String args[]){
 		Room.enter();
-		while(!kill){
+		while(!Player.kill){
 			GetInput.input();
 		}
-	}
-	public static void main(String args[]){
-		TextAdventure();
+		Scans.inputer.close();
 	}
 
 }
