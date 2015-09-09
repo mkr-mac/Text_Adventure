@@ -1,7 +1,9 @@
 
 public abstract class Item{
 	//TODO Make it so inventories work, and not all items are Foodstuff
-	String name = "Foodstuff";
+	String name;
+	int damage;
+	int curePower;
 	//There are different outcomes for eating a sword or a ham
 	//so we treat them differently even though they are both items
 	public abstract void hit();

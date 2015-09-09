@@ -30,15 +30,27 @@ public class ProcessInput {
 				break;
 				
 			case "item":
-				System.out.println(Player.i.name);			
+				System.out.println(Player.equipped.name);			
+				break;
+				
+			case "view":
+				Inventory.view();			
+				break;
+				
+			case "add":
+				Inventory.add(new Food(Food.foodType.Burger));			
 				break;
 				
 			case "eat":
-				Player.i.eat();			
+				Player.equipped.eat();			
+				break;
+				
+			case "equip":
+				Player.equip();			
 				break;
 				
 			case "rename":
-				Player.i.rename();			
+				Player.equipped.rename();			
 				break;
 				
 			case "look":
