@@ -1,19 +1,26 @@
 
-public class Player {
-	//TODO create a held item field
+public class Player
+{	
 	//TODO spawn with a random item
+	
 	//The player's name
 	static String name;
-	//And it's class
+	
+	//And their class
 	static String plclass;
+	
 	//For story stuff, insanity will affect what dialogue is displayed
 	static int insanity = 0;
+	
 	//player is alive
 	static boolean life = true;
+	
 	//the player's inventory
 	static Inventory inv = new Inventory();
+	
 	//equipped item
 	static Item equipped;
+	
 	
 	//The name of the player in the opening scene is set here
 	public static void nameSet()
@@ -22,6 +29,7 @@ public class Player {
 		name = Scans.readLine();
 		System.out.println("Yeah, your name is " + name + ". How could you forget?");
 	}
+	
 	//The incredibly relevant class of the player is set here
 	public static void classSet()
 	{
@@ -30,17 +38,20 @@ public class Player {
 		plclass = Scans.readLine().toLowerCase();
 		System.out.println("You do some reflecting, and coming up blank, consider " + plclass + " to be close enough.");
 	}
+	
 	public static void equip()
 	{
 		System.out.println("What item?");
 		System.out.println("Currently in inventory:");
 		Inventory.view();
 		Item temp = Inventory.equip(Scans.readLine());
+		
 		if(temp != null)
-		{
+		{	
 			if(equipped != null){
 				Inventory.itemList.addLast(equipped);
 			}
+			
 			equipped = temp;
 		}
 	}

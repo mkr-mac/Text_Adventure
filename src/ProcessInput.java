@@ -1,71 +1,75 @@
 
-public class ProcessInput {
-	public static void input() {
-		
+public class ProcessInput
+{
+	
+	public static void input()
+	{		
 		//Get the user input
 		//Make it lower case
 		//then break it up for processing
 		String[] userinput = Scans.readLine().toLowerCase().split(" ", 0);
 		
-		for(int i=0; i < userinput.length; i++){
+		for(int i=0; i < userinput.length; i++)
+		{
 
-			switch(userinput[i]){
+			switch(userinput[i])
+			{
 			
-			case "help":
-				System.out.println("Look - Observe the room around you.");
-				System.out.println("Move/Go - Move in a direction.");
-				System.out.println("Kill Self/Suicide - End it all");			
-				break;
-				
-			case "move":
-				System.out.println("You move, but not in any paticular direction.");			
-				break;
-				
-			case "go":
-				System.out.println("Go where?");			
-				break;
-				
-			case "move north": case"move forward":case "go north":case "go forward":
-				Room.enter();			
-				break;
-				
-			case "item":
-				System.out.println(Player.equipped.name);			
-				break;
-				
-			case "view":
-				Inventory.view();			
-				break;
-				
-			case "add":
-				Inventory.add(new Food(Food.foodType.Burger));			
-				break;
-				
-			case "eat":
-				Player.equipped.eat();			
-				break;
-				
-			case "equip":
-				Player.equip();			
-				break;
-				
-			case "rename":
-				Player.equipped.rename();			
-				break;
-				
-			case "look":
-				Room.description();			
-				break;
-				
-			case "suicide": case "kill self":
-				//Kills self, ends game loop
-				Player.life = false;			
-				break;
-				
-			default:
-				System.out.println("You are unsure of what you mean by that.");			
-				break;
-				
+				case "help":
+					System.out.println("Look - Observe the room around you.");
+					System.out.println("Move/Go - Move in a direction.");
+					System.out.println("Kill Self/Suicide - End it all");			
+					break;
+					
+				case "move":
+					System.out.println("You move, but not in any paticular direction.");			
+					break;
+					
+				case "go":
+					System.out.println("Go where?");			
+					break;
+					
+				case "move north": case"move forward":case "go north":case "go forward":
+					Room.enter();			
+					break;
+					
+				case "item":
+					System.out.println(Player.equipped.name);			
+					break;
+					
+				case "view":
+					Inventory.view();			
+					break;
+					
+				case "add":
+					Inventory.add(new Food(Food.foodType.Burger));			
+					break;
+					
+				case "eat":
+					Player.equipped.eat();			
+					break;
+					
+				case "equip":
+					Player.equip();			
+					break;
+					
+				case "rename":
+					Player.equipped.rename();			
+					break;
+					
+				case "look":
+					Room.description();			
+					break;
+					
+				case "suicide": case "kill self":
+					//Kills self, ends game loop
+					Player.life = false;			
+					break;
+					
+				default:
+					System.out.println("You are unsure of what you mean by that.");			
+					break;
+					
 			}
 		}
 	}
