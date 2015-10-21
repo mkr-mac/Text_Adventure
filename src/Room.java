@@ -12,9 +12,19 @@ public class Room
 		if(roomNumber == 1)
 		{
 			System.out.println("You wake up and find yourself in a room.");
+
 			//Character setup
+			System.out.println("Feeling a bit dazed, You have a hard time recalling your name. What is it?");
+
 			Player.nameSet();
+			System.out.println("Yeah, your name is " + Player.name + ". How could you forget?");
+			
+			System.out.println("But what were you? After a quick look over yourself you confirm you are human. But what did you do?");
+			System.out.println("After you inspect your possesions, you believe you were a:");
+			
 			Player.classSet();
+			System.out.println("You do some reflecting, and coming up blank, consider " + Player.plclass + " to be close enough.");
+			
 			System.out.println("Well, what are you going to do?");
 			
 		}else if(roomNumber >= 2)

@@ -1,2 +1,5 @@
 /Inventory.class
 /Food$foodType.class
+/Weapon.class
+/Movement.class
+/Weapon$weaponType.class
